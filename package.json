@@ -1,0 +1,36 @@
+{
+  "name": "angular-mf-labs",
+  "version": "1.0.0",
+  "description": "Portfolio de Microfrontends con Angular - Demostración de habilidades senior",
+  "private": true,
+  "workspaces": [
+    "day01-ecommerce-mf/apps/*",
+    "day01-ecommerce-mf/libs/*",
+    "day02-analytics-mf/apps/*",
+    "day02-analytics-mf/libs/*",
+    "day03-realtime-mf/apps/*",
+    "day03-realtime-mf/libs/*"
+  ],
+  "scripts": {
+    "install:all": "npm run -ws install",
+    "dev:day01": "concurrently -n shell,catalog,checkout,orders \"npm --workspace day01-ecommerce-mf/apps/shell start\" \"npm --workspace day01-ecommerce-mf/apps/mf-catalog start\" \"npm --workspace day01-ecommerce-mf/apps/mf-checkout start\" \"npm --workspace day01-ecommerce-mf/apps/mf-orders start\"",
+    "dev:day02": "concurrently -n shell,ingestion,dashboard,admin \"npm --workspace day02-analytics-mf/apps/shell start\" \"npm --workspace day02-analytics-mf/apps/mf-ingestion start\" \"npm --workspace day02-analytics-mf/apps/mf-dashboard start\" \"npm --workspace day02-analytics-mf/apps/mf-admin start\"",
+    "dev:day03": "concurrently -n shell,editor,comments,activity \"npm --workspace day03-realtime-mf/apps/shell start\" \"npm --workspace day03-realtime-mf/apps/mf-editor start\" \"npm --workspace day03-realtime-mf/apps/mf-comments start\" \"npm --workspace day03-realtime-mf/apps/mf-activity start\"",
+    "build:all": "npm -ws run build",
+    "test:all": "npm -ws test",
+    "lint:all": "npm -ws run lint",
+    "format": "prettier -w .",
+    "analyze": "webpack-bundle-analyzer dist/**/stats.json"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^17.0.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.1",
+    "webpack-bundle-analyzer": "^4.10.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
