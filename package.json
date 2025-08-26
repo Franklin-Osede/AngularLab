@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "install:all": "npm run -ws install",
-    "dev:day01": "concurrently -n shell,catalog,checkout,orders \"npm --workspace day01-ecommerce-mf/apps/shell start\" \"npm --workspace day01-ecommerce-mf/apps/mf-catalog start\" \"npm --workspace day01-ecommerce-mf/apps/mf-checkout start\" \"npm --workspace day01-ecommerce-mf/apps/mf-orders start\"",
+              "dev:day01": "concurrently -n shell,catalog,orders,customers \"npm --workspace day01-ecommerce-mf/apps/shell start\" \"npm --workspace day01-ecommerce-mf/apps/mf-catalog start\" \"npm --workspace day01-ecommerce-mf/apps/mf-orders start\" \"npm --workspace day01-ecommerce-mf/apps/mf-customers start\"",
     "dev:day02": "concurrently -n shell,ingestion,dashboard,admin \"npm --workspace day02-analytics-mf/apps/shell start\" \"npm --workspace day02-analytics-mf/apps/mf-ingestion start\" \"npm --workspace day02-analytics-mf/apps/mf-dashboard start\" \"npm --workspace day02-analytics-mf/apps/mf-admin start\"",
     "dev:day03": "concurrently -n shell,editor,comments,activity \"npm --workspace day03-realtime-mf/apps/shell start\" \"npm --workspace day03-realtime-mf/apps/mf-editor start\" \"npm --workspace day03-realtime-mf/apps/mf-comments start\" \"npm --workspace day03-realtime-mf/apps/mf-activity start\"",
     "build:all": "npm -ws run build",
