@@ -1,0 +1,58 @@
+import { Product } from '../models/product.model';
+
+export const MOCK_PRODUCTS: Product[] = [
+  {
+    id: 1,
+    name: 'Laptop Pro',
+    price: 1299.99,
+    description: 'High-performance laptop for professionals',
+    category: 'Electronics',
+    inStock: true,
+    createdAt: new Date('2024-01-15'),
+  },
+  {
+    id: 2,
+    name: 'Wireless Headphones',
+    price: 199.99,
+    description: 'Premium noise-canceling headphones',
+    category: 'Electronics',
+    inStock: true,
+    createdAt: new Date('2024-01-20'),
+  },
+  {
+    id: 3,
+    name: 'Smart Watch',
+    price: 299.99,
+    description: 'Fitness and health tracking smartwatch',
+    category: 'Electronics',
+    inStock: false,
+    createdAt: new Date('2024-01-25'),
+  },
+  {
+    id: 4,
+    name: 'Coffee Maker',
+    price: 89.99,
+    description: 'Programmable coffee maker with timer',
+    category: 'Home & Kitchen',
+    inStock: true,
+    createdAt: new Date('2024-02-01'),
+  },
+  {
+    id: 5,
+    name: 'Running Shoes',
+    price: 129.99,
+    description: 'Comfortable running shoes for all terrains',
+    category: 'Sports',
+    inStock: true,
+    createdAt: new Date('2024-02-05'),
+  },
+  {
+    id: 6,
+    name: 'Yoga Mat',
+    price: 49.99,
+    description: 'Non-slip yoga mat for home workouts',
+    category: 'Sports',
+    inStock: false,
+    createdAt: new Date('2024-02-10'),
+  },
+];
