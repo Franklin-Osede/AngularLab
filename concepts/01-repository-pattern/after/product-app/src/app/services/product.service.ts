@@ -1,18 +1,20 @@
-import { Injectable, Inject } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Product } from '../models/product.model';
 import {
   IProductRepository,
-  SearchFilters,
   PRODUCT_REPOSITORY,
+  SearchFilters,
 } from '../repositories/product.repository.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  constructor(@Inject(PRODUCT_REPOSITORY) private productRepository: IProductRepository) {}
+  constructor(
+    @Inject(PRODUCT_REPOSITORY) private productRepository: IProductRepository,
+  ) {}
 
   // ✨ Clean service methods - delegates to repository
   getProducts(): Observable<Product[]> {

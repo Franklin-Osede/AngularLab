@@ -1,6 +1,6 @@
+import { InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product.model';
-import { InjectionToken } from '@angular/core';
 
 // ✨ Repository Interface - Clean abstraction
 export interface IProductRepository {
@@ -28,4 +28,6 @@ export interface SearchFilters {
 }
 
 // ✨ Injection Token for Repository
-export const PRODUCT_REPOSITORY = new InjectionToken<IProductRepository>('ProductRepository');
+export const PRODUCT_REPOSITORY = new InjectionToken<IProductRepository>(
+  'ProductRepository',
+);
